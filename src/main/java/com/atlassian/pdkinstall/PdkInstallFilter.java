@@ -34,7 +34,7 @@ public class PdkInstallFilter implements Filter {
     private final PluginAccessor pluginAccessor;
 
     private final PluginArtifactFactory pluginArtifactFactory;
-    private static final Log log = LogFactory.getLog(FakePdkFilter.class);
+    private static final Log log = LogFactory.getLog(PdkInstallFilter.class);
 
     public PdkInstallFilter(PluginController pluginController, PluginAccessor pluginAccessor) {
         this.pluginController = pluginController;
