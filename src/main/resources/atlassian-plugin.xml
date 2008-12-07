@@ -1,0 +1,17 @@
+<atlassian-plugin name="${project.name}" key="com.atlassian.pdkinstall" pluginsVersion="2">
+    <plugin-info>
+        <version>1.0-SNAPSHOT</version>
+        <vendor name="Atlassian Software Systems Pty Ltd" url="http://www.atlassian.com"/>
+        <bundle-instructions>
+            <Export-Package></Export-Package>
+        </bundle-instructions>
+    </plugin-info>
+
+    <servlet-filter name="pdk" key="pdk" class="com.atlassian.pdkinstall.PdkInstallFilter"
+        location="before-dispatch">
+        <url-pattern>/admin/uploadplugin.action</url-pattern>
+    </servlet-filter>
+
+    <servlet-context-listener key="fileCleanup" class="org.apache.commons.fileupload.servlet.FileCleanerCleanup" />
+
+</atlassian-plugin>
